@@ -1,0 +1,7 @@
+{
+  "name": "AndoIonico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
