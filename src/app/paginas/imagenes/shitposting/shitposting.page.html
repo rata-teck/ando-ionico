@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Shitposting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img *ngFor="let sp of shitpost" src="{{sp}}" height="400">
+</ion-content>

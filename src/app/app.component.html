@@ -1,7 +1,20 @@
 <ion-app>
-  <ion-content>
-    <h2>Ando ionico!!!</h2>
-    <h4>Los memes, chistes y comentarios de un wn terrible ionico</h4>
-    <p>Esta wea fue programada por el Ratón Dani. IG: @daniel.castro.7568</p>
-  </ion-content>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Wena ionico!</ion-list-header>
+          <ion-note>Weas ionicas pa gente ionica.</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

@@ -12,12 +12,36 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'memes',
-    loadChildren: () => import('./paginas/memes/memes.module').then( m => m.MemesPageModule)
+    path: 'paginas/texto/funas',
+    loadChildren: () => import('./paginas/texto/funas/funas.module').then( m => m.FunasPageModule)
   },
   {
-    path: 'chistes',
-    loadChildren: () => import('./paginas/chistes/chistes.module').then( m => m.ChistesPageModule)
+    path: 'paginas/texto/comentarios',
+    loadChildren: () => import('./paginas/texto/comentarios/comentarios.module').then( m => m.ComentariosPageModule)
+  },
+  {
+    path: 'paginas/texto/chistes',
+    loadChildren: () => import('./paginas/texto/chistes/chistes.module').then( m => m.ChistesPageModule)
+  },
+  {
+    path: 'paginas/texto/noticias',
+    loadChildren: () => import('./paginas/texto/noticias/noticias.module').then( m => m.NoticiasPageModule)
+  },
+  {
+    path: 'paginas/imagenes/comida',
+    loadChildren: () => import('./paginas/imagenes/comida/comida.module').then( m => m.ComidaPageModule)
+  },
+  {
+    path: 'paginas/imagenes/memes',
+    loadChildren: () => import('./paginas/imagenes/memes/memes.module').then( m => m.MemesPageModule)
+  },
+  {
+    path: 'paginas/imagenes/vendias',
+    loadChildren: () => import('./paginas/imagenes/vendias/vendias.module').then( m => m.VendiasPageModule)
+  },
+  {
+    path: 'paginas/imagenes/shitposting',
+    loadChildren: () => import('./paginas/imagenes/shitposting/shitposting.module').then( m => m.ShitpostingPageModule)
   }
 ];
 

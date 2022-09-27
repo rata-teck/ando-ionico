@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Memes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img *ngFor="let m of meme" src="{{m}}" height="400">
+</ion-content>
